@@ -1,14 +1,7 @@
-const currency = "$";
+const currency = "$"; // Made this a global variable to allow it be changeable and the displayed currency would adapt
 
-async function getCurrencies() {
-    const data = await fetch("https://restcountries.com/v3.1/currency/cop");
-    console.log(data);
-}
-
-async function displayCurrencies() {
-    const data = await getCurrencies();
-}
-function getNewTrends() {
+// Function for getting the latest trends. Separated this to displaying in case it will be an API call
+function getTrends() {
     const data = [
         {
             title: "Winter Fashion",
@@ -47,8 +40,8 @@ function getNewTrends() {
     return data;
 }
 
-async function displayNewTrends() {
-    const data = await getNewTrends();
+async function displayTrends() {
+    const data = await getTrends();
     let html = data.map(a => {
         return `<div class="grid-item trend">
         <div class="image-container"><img src="${a.image}"></div>
@@ -61,6 +54,7 @@ async function displayNewTrends() {
     document.getElementById("trends").innerHTML = html;
 }
 
+// Function for getting the recently bought items. Separated this to displaying in case it will be an API call
 function getRecentlyBought() {
     const data = [
         {
@@ -98,11 +92,12 @@ function getRecentlyBought() {
     return data;
 }
 
+// Function for displaying the recently bought items
 async function displayRecentlyBought() {
     const data = await getRecentlyBought();
 
     let html = data.map(a => {
-    const priceClass = a.previousPrice ? "sale-price" : "current-price";
+    const priceClass = a.previousPrice ? "sale-price" : "current-price"; // This is to decide what should be the style set to the price if it has a previous price or not
     const price = a.currentPrice;
     const prevPriceHTML = a.previousPrice ? `<del class="prev-price">${currency}${a.previousPrice}</del>` : "";
 
@@ -118,6 +113,7 @@ async function displayRecentlyBought() {
     document.getElementById("recently-bought").innerHTML = html;
 }
 
+// Function for getting the instagram posts. Separated this to displaying in case it will be an API call
 function getInstaPosts() {
     const data = [
         {
@@ -150,6 +146,7 @@ function getInstaPosts() {
     return data;
 }
 
+// Function for displaying the instagram posts
 async function displayInstaPosts() {
     const data = await getInstaPosts();
 
@@ -164,11 +161,12 @@ async function displayInstaPosts() {
     document.getElementById("insta-posts").innerHTML = html;
 }
 
+// main function that will be the first function that will be called
 function load() {
-    displayCurrencies();
-    displayNewTrends();
+    displayTrends();
     displayRecentlyBought();
     displayInstaPosts();
 }
 
+// call main function after all HTML document has been loadeds
 document.addEventListener('DOMContentLoaded', () => { load(); }, false);

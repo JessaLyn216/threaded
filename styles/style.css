@@ -1,0 +1,436 @@
+@import url("./fonts.css");
+
+html, body {
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+/* Navbar Section */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 0;
+    width: 97%;
+}
+
+.left-nav .nav-item {
+    padding: 9px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: black !important;
+}
+
+.nav-item.active {
+    font-family: 'Montserrat Semi Bold';
+}
+
+.nav-item:hover,
+.right-nav .tab:hover {
+    background-color: #F2F2F2;
+    transition: 0.3s;
+}
+
+.right-nav {
+    display: flex;
+}
+
+.right-nav .tabs {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav .tab {
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.currency {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    border-radius: 50px;
+    border: 1px solid rgb(221, 221, 221);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.currency:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px -3px;
+}
+
+.currency span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.currency-icon {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 5px;
+}
+
+.currency .drop-icon {
+    height: 5px;
+    width: 7px;
+    margin: 0 5px 0 7px;
+}
+
+.cover {
+    margin-top: 67px;
+}
+
+/* Benefits */
+.cover .benefits {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-around;
+    background-color: #F2F2F2;
+}
+
+.cover .benefits .benefit {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.cover .benefit .benefit-icon {
+    margin-right: 15px;
+}
+
+/* Deals and Vouchers Section */
+.deals {
+    display: flex;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.vouchers {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.vouchers .voucher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.voucher .price-off {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-family: 'Montserrat Bold';
+}
+
+.voucher .price {
+    margin-right: 10px;
+    font-family: 'Montserrat Semi Bold';
+}
+
+.deals button {
+    margin-left: auto;
+}
+
+/* Banner 1 */
+.banner-1,
+.banner-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    background-position: cover;
+    text-transform: uppercase;
+}
+
+.banner-1 {
+    background: url('../images/bg.png');
+}
+
+.banner-1 > span,
+.banner-1 > div {
+    padding: 0 30px;
+}
+
+.banner-1 .event-header,
+.banner-3 .event-header {
+    font-family: 'Montserrat Bold';
+    text-transform: uppercase;
+}
+
+.banner-1 .event-desc {
+    font-family: 'Montserrat Medium';
+    font-size: 1.2rem;
+    width: 28%;
+}
+
+/* Trending */
+.trending,
+.insta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px 50px 30px;
+}
+
+.trending header,
+.recents header,
+.insta header  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.trending h1,
+.recents h1,
+.insta h1  {
+    font-size: 2.3rem;
+    font-family: 'Montserrat Bold';
+}
+
+.trending-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.trend .image-container {
+    margin-bottom: 10px;
+}
+
+.trend {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Montserrat Semi Bold';
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.hashtags {
+    display: flex;
+    margin-top: 10px;
+}
+
+.hashtags .hashtag {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-family: 'Montserrat Medium';
+    margin: 0 12px;
+}
+
+/* Banner 2 */
+.banner-2 .banner-container {
+    position: relative;
+}
+
+.banner-2 .banner-text {
+    color: white;
+    position: absolute;
+    right: 0;
+    margin: 50px 0 0 auto;
+    width: 45%;
+    font-family: 'Montserrat Bold';
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.banner-2 .banner-text h1 {
+    font-size: 5.4rem;
+    text-transform: uppercase;
+    line-height: 5rem;
+    margin: 0;
+}
+
+.banner-2 .banner-text span {
+    font-size: 1.8rem;
+    font-family: 'Montserrat Medium';
+    margin: 2rem 0;
+}
+
+/* Recently Bought */
+.recents {
+    padding: 50px;
+}
+
+.recents-grid-container,
+.insta-posts-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.recent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 95%;
+}
+
+.recent .price {
+    font-family: 'Montserrat Semi Bold';
+}
+
+.recent-title {
+    font-size: 0.8rem;
+    padding-right: 20px;
+}
+
+.recent .price .sale-price {
+    color: #C1272D;
+    margin-right: 15px;
+}
+
+/* Instagram Posts */
+.insta {
+    background-color: #F2F2F2;
+}
+
+.insta-post {
+    padding: 20px;
+}
+
+/* Banner 3 */
+.banner-3 {
+    background-color: #000000;
+}
+
+.banner-3 .event-header {
+    margin-right: 50px;
+}
+
+.banner-3 .go-button {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+}
+.banner-3 .form {
+    display: flex;
+}
+
+.form input {
+    height: 35px !important;
+    padding: 0 20px;
+    border-radius: 0px;
+    border: 0;
+    width: 300px;
+    font-family: 'Montserrat';
+    background-color: #F2F2F2;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    font-size: 0.75rem;
+}
+
+.footer-links {
+    display: flex;
+    width: 70%;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.footer-col-title {
+    text-transform: uppercase;
+    padding: 10px;
+    font-family: 'Montserrat Semi Bold';
+}
+
+.footer-links .link {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.payment-method .link {
+    width: 40px;
+}
+
+.payment-method .link img {
+    width: 100%;
+}
+
+.social-media-links,
+.payment-method {
+    display: flex;
+    padding: 0;
+}
+
+.footer-all-rights {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0 10px 0;
+}
+
+section {
+    font-size: 0.87rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-family: 'Montserrat Semi Bold';
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    min-width: fit-content;
+}
+
+button.white {
+    background-color: white;
+}
+
+button.black {
+    background-color: #000000;
+    color: white;
+}
+
+.banner-container {
+    display: flex;
+}
+
+.banner-container img {
+    height: 100%;
+    width: 100%;
+}
+
+.small-text {
+    font-size: 0.6rem;
+}
+
+.emp-text {
+    font-size: 2rem !important;
+}
